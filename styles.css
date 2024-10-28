@@ -1,0 +1,205 @@
+/* Global Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* UP Color Scheme */
+:root {
+    --up-maroon: #7b1113;
+    --up-green: #1b542c;
+    --up-dark-green: #004d40;
+    --text-color: #333;
+}
+
+/* Header */
+header {
+    background-color: var(--up-maroon);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1, header h2, header h3 {
+    margin: 5px 0;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header h2 {
+    font-size: 1.5em;
+}
+
+header h3 {
+    font-size: 1.2em;
+}
+
+/* Section */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Partner Logos Section */
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Space between logos */
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.partner-logo {
+    max-width: 200px; /* Adjust as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Info Paragraphs */
+.info {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Registration, Agenda, and Organizers Sections */
+.registration, .agenda, .organizers {
+    margin-top: 40px;
+}
+
+.registration h2, .agenda h2, .organizers h2 {
+    font-size: 1.8em;
+    color: var(--up-green);
+    margin-bottom: 20px;
+}
+
+/* Agenda */
+.agenda .day-schedule {
+    margin-bottom: 30px;
+}
+
+.agenda h3 {
+    font-size: 1.5em;
+    color: var(--up-dark-green);
+    margin-bottom: 10px;
+}
+
+/* Schedule Table */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.schedule-table th {
+    background-color: #e6e2da;
+    color: var(--up-maroon);
+    font-weight: bold;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.schedule-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Organizers List */
+.organizers ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.organizers li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--up-maroon);
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .registration h2, .agenda h2, .organizers h2 {
+        font-size: 1.6em;
+    }
+
+    .partner-logo {
+        max-width: 150px; /* Reduce logo size on medium screens */
+    }
+
+    .partner-logos {
+        gap: 20px; /* Reduce space between logos */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .info {
+        font-size: 1em;
+    }
+
+    .registration h2, .agenda h2, .organizers h2 {
+        font-size: 1.4em;
+    }
+
+    .agenda h3 {
+        font-size: 1.3em;
+    }
+
+    .partner-logo {
+        max-width: 120px; /* Further reduce logo size on small screens */
+    }
+
+    .partner-logos {
+        gap: 10px; /* Further reduce space between logos */
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
